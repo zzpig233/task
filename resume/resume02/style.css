@@ -1,0 +1,147 @@
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+body{
+    background-color: #efefef;
+    margin: 0px;
+}
+
+.topNavBar >.nav_gauge >nav >ul >li {
+    
+    float: left;
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-top: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #b7b7b7;   
+}
+.topNavBar >.nav_gauge >nav >ul >li > a{
+    color: #b7b7b7;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom:solid 3px transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.topNavBar >.nav_gauge >a {
+    display: inline-block;
+    text-decoration: none;
+}
+.topNavBar>.nav_gauge >nav> ul > li> a:hover{
+    border-bottom: solid 3px #e06567;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.topNavBar >.nav_gauge >nav >ul {
+    list-style: none;
+}
+.topNavBar >.nav_gauge >nav {
+    float: right;
+}
+.topNavBar{
+    padding-top: 12px;
+    padding-bottom: 21px;
+    padding-right: 16px;
+    position: fixed;
+    width: 100%;
+}
+.topNavBar .logo .rs{
+    font-size: 24px;
+    color: #e06567;
+    font-family: "Arial Black";
+    margin-right: 4px;
+}
+.topNavBar .logo .card{
+    font-size: 24px;
+    color: #b7b7b7;
+    font-family: "Arial Black";
+}
+.topNavBar .logo{
+    padding-top: 11px;
+    padding-left: 16px;
+}
+.banner{
+    height: 515px;
+    background-image: url(./img/rs-cover-2-2-1-1.jpg);
+    background-position: center center;
+    background-size: cover；
+}
+.banner_color{
+    height: 515px;
+    background-color: rgba(0,0,0,0.7);
+}
+.topNavBar >.nav_gauge{
+    padding-right: 16px;
+}
+.user_Card{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+}
+.user{
+    padding: 50px;
+}
+.picture{
+    float: left;
+}
+.tetx{
+    
+}
+.porfile{
+    width: 470px;
+    float: left;
+    margin-left: 70px;
+}
+.porfile >dl >dt {
+    display: inline-block;
+    width: 20%;
+    font-weight: bold;
+    padding: 5px;
+}
+.porfile >dl >dd {
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+}
+.welcome{
+    background-color: #e06567;
+    color: white;
+    font-size: 16px;
+    padding: 5px 15px;
+    position: absolute;
+}
+.triangle{
+    border: 10px solid;
+    border-color: transparent;
+    border-left-color: #e06567;
+    width: 0px;
+    height: 0px;
+    border-top-width: 0px;
+    margin-left: 4px;
+    margin-top: 31px; 
+    position: relative;
+}
+.name{
+    margin-bottom: 0px;
+}
+.job{
+    margin-top: 5px;
+}
+.hr{
+    border-top: #dedede;
+}
+.user_Card svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+    margin: 20px;
+}
+.media{
+    background-color: #e06567;
+    text-align: center;
+}
