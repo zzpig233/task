@@ -139,9 +139,21 @@ body{
     width: 30px;
     height: 30px;
     fill: white;
-    margin: 20px;
+    vertical-align: top;
 }
 .media{
     background-color: #e06567;
     text-align: center;
+}
+.media >a{
+    text-align: center;
+    width: 40px;
+    display: inline-block;
+    line-height: 30px;
+    margin: 16px;
+    padding: 5px 0px;
+    border-radius: 50%  
+}
+.media >a:hover{
+    background: #cf5d5f;
 }
