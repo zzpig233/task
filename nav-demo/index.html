@@ -117,14 +117,13 @@
 
 				var row = keys[index]
 				//	console.log(row)
-				for (var index2 = 0; index2 < row['length']; index2 = index2 + 1) {
-
+				for (var index2 = 0; index2 < row['length']; index2 = index2 + 1) {					
 					var span = createSpan(row[index2])
 
 					var button = createButton(row[index2])
 
 					var img1 = createImage(hash[row[index2]])
-
+					
 					var kbd1 = tag('kbd')
 					kbd1.className = 'key'
 
