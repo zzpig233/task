@@ -35,3 +35,12 @@ function setTimer(){
 function activeButton($button){
     $button.addClass('red').siblings('.red').removeClass('red')
 }
+
+
+
+<koji_m> great you came in man
+<koji_m> I've been waiting 17 months 
+<koji_m> to tell you you won't be reactivated
+<koji_m> good stuff
+<koji_m> you've been disabled for over a year + you're a cheating cunt
+<koji_m> so yeah, rang rang
