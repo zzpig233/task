@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h5>您的账户余额是
+        <span id="amount">&&&amount&&&</span>
+    </h5>
+    <button id="button">打钱</button>
+    <script>
+        button.addEventListener('click', (e)=>{
+        let script = document.createElement('script');
+        let functionName = 'gf' + parseInt(Math.random() * 100000, 10);
+        //给调用函数创建一个随机的函数名
+        script.src = 'http://jack.com:8002/pay?callback=' + functionName;
+        //jack.com为响应网站的域名，8002为响应网站的端口号
+        window[callback] = function (result) { //定义函数
+            if (result === 'success') {
+                amount.innerText = amount.innerText - 1;
+            }
+        }
+        script.onload = function (e) {
+            e.currentTarget.remove();//执行结束删除script标签
+            delete window[callback]; //执行结束删除函数
+        }
+        script.onerror = function (e) {
+            alert('fail');
+            e.currentTarget.remove();//执行结束删除script标签
+            delete window[callback];//执行结束删除函数
+        }
+    })
+    </script>
+</body>
+</html>
