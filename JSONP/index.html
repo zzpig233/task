@@ -27,12 +27,12 @@
         //script放在页面里浏览器才会发起请求
         script.onload = function (e) {
             e.currentTarget.remove();//执行结束删除script标签
-            delete window[callback]; //执行结束删除函数
+            delete window[functionName]; //执行结束删除函数
         }
         script.onerror = function (e) {
             alert('fail');
             e.currentTarget.remove();//执行结束删除script标签
-            delete window[callback];//执行结束删除函数
+            delete window[functionName];//执行结束删除函数
         }
     })
     </script>
