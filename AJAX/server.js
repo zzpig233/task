@@ -38,19 +38,24 @@ var server = http.createServer(function (request, response) {
         response.setHeader('Content-Type', 'text/json;charset=utf-8')
         response.setHeader('Access-Control-Allow-Origin', 'http://frank.com:8002')
         response.write(`
-    <?xml version="1.0" encoding="UTF-8"?>
-    <note>
-      <to>Tove</to>
-      <from>Jani</from>
-      <heading>Reminder</heading>
-      <body>Don't forget me this weekend!</body>
-    </note>
+        {
+            "note":{
+              "to": "小谷",
+              "from": "方方",
+              "heading": "打招呼",
+              "content": "hi"
+            }
+          }
     `)
         response.end()
     } else {
         response.statusCode = 404
         response.setHeader('Content-Type', 'text/html;charset=utf-8')
-        response.write('~~~~(>_<)~~~~')
+        response.write(`
+            {
+                "error": "not found"
+            }
+    `)
         response.end()
     }
 
