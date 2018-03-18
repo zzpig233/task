@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <title>谢世亮的个人简历</title>
     <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+
     <style type="text/css">
         .icon {
             width: 1em;
@@ -185,7 +188,7 @@
     </section>
     <section data-x id="siteWorks" class="portfolio">
         <h2>作品集</h2>
-        <nav class="">
+        <!-- <nav class="">
             <ol class="clearfix">
                 <li id="button_1">所有</li>
                 <li id="button_2">框架</li>
@@ -206,8 +209,55 @@
             button_3.onclick = function () {
                 button.className = 'bar state-3'
             }
-        </script>
-        <div class="jobs clearfix">
+        </script> -->
+        <style>
+                .swiper-container {
+                    width: 668px;
+                    height: 501px;
+                }
+                .swiper-slide{
+                    background: white;
+                }
+                .swiper-button-prev, .swiper-button-next{
+                    background-color: white;
+                    width: 64px;
+                    height: 64px;
+                    right: 100%;
+                    left: auto;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 300px;
+                }
+                .swiper-button-next{
+                    left: 100%;
+                    right: auto;
+                }
+                .swiper-pagination-bullet-active{
+                    background: green;
+                }
+            </style>
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <img src="./img/works/3.png" class="swiper-slide">
+                    <img src="./img/works/2.png" class="swiper-slide">
+                    <img src="./img/works/1.png" class="swiper-slide">
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+    
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+    
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+            <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        <!-- <div class="jobs clearfix">
             <div class="big">
                 <img src="./img/1.jpg" alt="作品1">
             </div>
@@ -217,8 +267,35 @@
             <div class="small2">
                 <img src="./img/3.jpg" alt="作品3">
             </div>
-        </div>
+        </div> -->
+
+        
+            <script>
+                    var mySwiper = new Swiper ('.swiper-container', {
+                      // Optional parameters
+                    
+                      loop: true,
+                  
+                      // If we need pagination
+                      pagination: {
+                        el: '.swiper-pagination',
+                      },
+                  
+                      // Navigation arrows
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                  
+                      // And if we need scrollbar
+                    //   scrollbar: {
+                    //     el: '.swiper-scrollbar',
+                    //   },
+                    })
+                   
+                    </script>
     </section>
+
     <script>
         setTimeout(function () {
             siteWelcome.classList.remove('active')
@@ -241,13 +318,16 @@
         }
 
         function findClosest(){
+            console.log(window.scrollY)
             let specialTags = document.querySelectorAll('[data-x]')
             let minIndex = 0
             for (let i = 1; i < specialTags.length; i++) {
                 if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+                    console.log(specialTags[i].offsetTop) 
                     minIndex = i
                 }
             }
+            console.log(minIndex)
             // minIndex就是里窗口顶部最近的元素
             specialTags[minIndex].classList.remove('offset')
             // specialTags[minIndex].classList.add('active')
@@ -255,7 +335,6 @@
             let a = document.querySelector('a[href="#' + id + '"]')
             // id == 'siteAbout'    'a[href="#siteAbout"]'
             let li = a.parentNode
-            console.log(li)
             let brothersAndMe = li.parentNode.children
             for (let i = 0; i < brothersAndMe.length; i++) {
                 brothersAndMe[i].classList.remove('highlight')
@@ -331,9 +410,3 @@
 </body>
 
 </html>
-
-
-
-var students = ['小明','小红','小花'] 
-var scores = { 小明: 59, 小红: 99, 小花: 80 } 
-students.sort(???)
